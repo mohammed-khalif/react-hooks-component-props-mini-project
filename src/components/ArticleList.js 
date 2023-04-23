@@ -6,6 +6,9 @@ function ArticleList(){
 
     return(
         <main>
+          {articles.map((article) => (
+        <Article key={article.id} article={article} />
+      ))}
             {blogData.posts.map((blog) =>(
                 <Article key={blog.id} title={blog.title} date={blog.date} preview={blog.preview}/>
             ))}
